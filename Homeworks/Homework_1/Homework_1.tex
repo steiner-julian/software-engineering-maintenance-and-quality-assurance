@@ -1,0 +1,115 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hmargin=15mm, tmargin=25mm, bmargin=25mm]{geometry}
+\usepackage[english, main=ngerman]{babel}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[table]{xcolor}
+
+\usepackage{enumitem} %needed to change enumerate options
+\usepackage{graphicx}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{xltabular}
+\usepackage{rotating}
+
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{color}
+
+\include{assets/Variantenmanagement_Config_1/head.tex}
+
+\pagestyle{fancy}
+\fancyhf{}
+\headheight=40pt
+\fancyhead[L]{SE: Wartung \& QS}
+\fancyhead[C]{\Large{Hausübung 01}}
+\fancyhead[R]{Gruppe 32}
+\renewcommand{\headrule}{{\color[HTML]{005AA9} \rule{\linewidth}{0.2cm}}}
+\fancyfoot[L]{Felix Clajus, Timo Dreher, Julian Steiner}
+\fancyfoot[R]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%array formating
+\setlength{\tabcolsep}{0.2cm}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\arrayrulewidth}{.3mm}
+\newcolumntype{C}{>{\Centering\arraybackslash}X}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{R}{>{\RaggedLeft\arraybackslash}X}
+
+
+\title{}
+\author{Felix Clajus}
+
+\setlist[enumerate]{label=(\alph*)}
+\titleformat{\section}{}{\Large\textbf{Aufgabe \arabic{section}}}{0cm}{\Large\textbf{:} }
+
+\begin{document}
+
+    \section{}
+        \begin{enumerate}
+            \item
+                diff-Datei gemäß der Notation aus der Vorlesung:
+                \begin{center}
+                    \begin{tabularx}{0.9\textwidth}{|>{\hsize=0.025\hsize}CL|}
+                        \hline
+                        \multicolumn{2}{|L|}{*** 01,03 *** Hunk 1 ***}\\
+                        & Wer routet so spät durch Nacht und Wind\\
+                        ! & Es ist der Router, er routet geschwind!\\
+                        - & Bald routet er hier, bald routet er dort\\
+                        \multicolumn{2}{|L|}{--- 01,02 ---}\\
+                        & Wer routet so spät durch Nacht und Wind\\
+                        ! & Es ist die Fritzbox,, sie Routet geschwind!\\
+                        \multicolumn{2}{|L|}{***********************}\\
+                        &\\
+                        \multicolumn{2}{|L|}{*** 04,05 *** Hunk 2 ***}\\
+                        & Jedoch die Pakete, sie kommen nicht fort.\\
+                        ! & Sie warten und warten\\
+                        \multicolumn{2}{|L|}{--- 03,06 ---}\\
+                        & Jedoch die Pakete, sie kommen nicht fort.\\
+                        ! & Sie sammeln und drängeln sich, warten recht lange \\
+                        + & in einer zu niedrig priorisierten Schlange.\\
+                        + & Die Schlangen sind voll, der Router im Stress, \\
+                        \multicolumn{2}{|L|}{***********************}\\
+                        &\\
+                        \multicolumn{2}{|L|}{*** 06,09 *** Hunk 3 ***}\\
+                        & da meldet sich vorlaut der Routingprozess\\
+                        ! & und ruft: \glqq All Ihr Päckchen, Ihr sorgt euch zu viel,\\
+                        - & nicht der IP-Host, nien, der Weg ist das Ziel!\grqq{} \\
+                        \multicolumn{2}{|L|}{--- 07,08 ---}\\
+                        & da meldet sich vorlaut der Routingprozess\\
+                        ! & und ruft: \glqq All Ihr Päckchen, Ihr sorgt euch sehr viel\grqq{} \\
+                        \multicolumn{2}{|L|}{***********************}\\
+                        \hline
+                    \end{tabularx}
+                \end{center}
+            \pagebreak
+            \item
+                Wer routet so spät durch Nacht und Wind?\\
+                Es ist der Router, er routet geschwind!\\
+                Bald routet er hier bald routet er dort\\
+                Jedoch die Pakete, sie kommen nicht fort\\
+                Sie sammeln und drängeln sich, warten recht lange\\
+                in einer zu niedrig priorisierten Schlange.\\
+                Die Schlangen sind voll, der Router im Stress,\\
+                da meldet sich vorlaut der Routingprozess\\
+                und ruft: \glqq All Ihr Päckchen, Ihr sorgt Euch zu viel,\\
+                nicht der IP-Host, nein, der Weg ist das Ziel!\grqq{}
+            \item
+        \end{enumerate}
+    \section{}
+        \begin{enumerate}
+            \item
+                \begin{centering}
+                    \includegraphics[width=\linewidth]{assets/Variantenmanagement}
+                \end{centering}
+            \pagebreak
+            \item
+                \input{assets/Variantenmanagement_Config_1/Variantenmanagement_Config_1.tex}
+
+                \input{assets/Variantenmanagement_Config_2/Variantenmanagement_Config_2.tex}
+        \end{enumerate}
+\end{document}
